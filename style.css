@@ -3,7 +3,7 @@ html {
   background: #ffc600;
 }
 
-.container {
+.tab-content, .container {
   max-width: 400px;
   margin: 50px auto;
   background: white;
@@ -12,9 +12,38 @@ html {
   text-align: center;
 }
 
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  background-color: #ccc;
+}
+
+.tab:hover {
+  background-color: #aaa;
+}
+
 .division {
   border: 1px solid black;
   margin: 5px;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
 }
 
 select, button {

@@ -5,58 +5,64 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <script src="index.js" defer></script>
+  <title>Unit Converter</title>
 </head>
 <body>
   <div class="container">
     <h1>Unit Convestion</h1>
-    <label for="units">Select you unit:</label>
-
-    <select name="units" id="unit">
-      <option value="meters">Meters</option>
-      <option value="cm">CM</option>
-      <option value="inches">Inches</option>
-      <option value="feet">Feet</option>
-    </select>
-    <input type="number" id="number" value="0">
-    <div class="division"></div>
-    <label for="units">Select you unit:</label>
-
-    <select name="units" id="targetunit">
-      <option value="meters">Meters</option>
-      <option value="cm">CM</option>
-      <option value="inches">Inches</option>
-      <option value="feet">Feet</option>
-    </select>
-    <button type="button" id="button">Convert!</button>
+    <div>
+      <ul class="tabs">
+        <li data-tab-target="#length" class="active tab">Length</li>
+        <li data-tab-target="#volume" class="tab">Volume</li>
+      </ul>
+    </div>
   </div>
-  <div class="container">
-    <p>Result:<span id="resulttext"></span></p>
+  <div class="tab-content">
+    <div id="length" data-tab-content class="active">
+      <label for="units">Select you unit:</label>
+
+      <select name="units" id="unit">
+        <option value="meters">Meters</option>
+        <option value="cm">CM</option>
+        <option value="inches">Inches</option>
+        <option value="feet">Feet</option>
+      </select>
+      <input type="number" id="number" value="0">
+      <div class="division"></div>
+      <label for="units">Select you unit:</label>
+
+      <select name="units" id="targetunit">
+        <option value="meters">Meters</option>
+        <option value="cm">CM</option>
+        <option value="inches">Inches</option>
+        <option value="feet">Feet</option>
+      </select>
+      <button type="button" id="button">Convert!</button>
+      <p>Result:<span id="resulttext"></span></p>
+    </div>
+    <div id="volume" data-tab-content>
+      <label for="units">Select you unit:</label>
+
+      <select name="units" id="unit">
+        <option value="cups">Cups</option>
+        <option value="ml">ML</option>
+        <option value="inches">Inches</option>
+        <option value="feet">Feet</option>
+      </select>
+      <input type="number" id="number" value="0">
+      <div class="division"></div>
+      <label for="units">Select you unit:</label>
+
+      <select name="units" id="targetunit">
+        <option value="meters">Meters</option>
+        <option value="cm">CM</option>
+        <option value="inches">Inches</option>
+        <option value="feet">Feet</option>
+      </select>
+      <button type="button" id="button">Convert!</button>
+      <p>Result:<span id="resulttext"></span></p>
+    </div>
   </div>
-<script>
-  const button = document.getElementById('button');
-
-  button.addEventListener('click', convert);
-
-  function convert(event) {
-    const resultText = document.getElementById('resulttext')
-    resultText.innerText = ''
-    let unit = document.getElementById('unit').value;
-    let targetUnit = document.getElementById('targetunit').value;
-    let number = document.getElementById('number');
-    let result
-    if (unit !== targetUnit) {
-      if (unit === 'meters' && targetUnit === 'cm') {
-        result = number.value * 100
-        resultText.innerText = ` ${result} ${targetUnit}`
-      } else if (unit === 'cm' && targetUnit === 'meters') {
-        result = number.value / 100
-        resultText.innerText = ` ${result} ${targetUnit}`
-      }
-    } else {
-      resultText.innerText = ` ${number.value} ${targetUnit}`
-    };
-  }
-</script>
 </body>
 </html>
