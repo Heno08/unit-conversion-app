@@ -3,7 +3,7 @@ html {
   background: #ffc600;
 }
 
-.tab-content, .container {
+.tab-content, .container, .results {
   max-width: 400px;
   margin: 50px auto;
   background: white;
