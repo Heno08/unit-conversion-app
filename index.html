@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src='index.js' type="module" defer></script>
+  <script src='main.js' type="module" defer></script>
   <title>Unit Converter</title>
 </head>
 <body>
@@ -17,47 +17,53 @@
         <li data-tab-target="#volume" class="tab">Volume</li>
       </ul>
     </div>
-  </div>
-  <div class="tab-content">
-    <div id="length" data-tab-content class="active">
-      <label for="units">Select you unit:</label>
+    <div class="tab-content">
+      <div id="length" data-tab-content class="active">
+        <label for="units">Select you unit:</label>
 
-      <select name="units" id="unit">
-        <option value="meters">Meters</option>
-        <option value="cm">CM</option>
-        <option value="inches">Inches</option>
-        <option value="feet">Feet</option>
-      </select>
-      <input type="number" id="number" value="0">
-      <div class="division"></div>
-      <label for="units">Select you unit:</label>
+        <select name="units" id="unit">
+          <option value="meters">Meters</option>
+          <option value="cm">CM</option>
+          <option value="kilometers">Kilometers</option>
+          <option value="inches">Inches</option>
+          <option value="feet">Feet</option>
+          <option value="yards">Yards</option>
+          <option value="miles">Miles</option>
+        </select>
+        <input type="number" id="number" value="0">
+        <div class="division"></div>
+        <label for="units">Select you unit:</label>
 
-      <select name="units" id="targetunit">
-        <option value="meters">Meters</option>
-        <option value="cm">CM</option>
-        <option value="inches">Inches</option>
-        <option value="feet">Feet</option>
-      </select>
-      <button type="button" id="lbutton">Convert!</button>
-      <p>Result:<span id="resulttext"></span></p>
-    </div>
-    <div id="volume" data-tab-content>
-      <label for="units">Select you unit:</label>
+        <select name="units" id="targetunit">
+          <option value="meters">Meters</option>
+          <option value="cm">CM</option>
+          <option value="kilometers">Kilometers</option>
+          <option value="inches">Inches</option>
+          <option value="feet">Feet</option>
+          <option value="yards">Yards</option>
+          <option value="miles">Miles</option>
+        </select>
+        <button type="button" id="lbutton">Convert!</button>
+        <p>Result:<span id="resulttext"></span></p>
+      </div>
+      <div id="volume" data-tab-content>
+        <label for="units">Select you unit:</label>
 
-      <select name="units" id="vunit">
-        <option value="cups">Cups</option>
-        <option value="ml">ML</option>
-      </select>
-      <input type="number" id="vnumber" value="0">
-      <div class="division"></div>
-      <label for="units">Select you unit:</label>
+        <select name="units" id="vunit">
+          <option value="cups">Cups</option>
+          <option value="ml">ML</option>
+        </select>
+        <input type="number" id="vnumber" value="0">
+        <div class="division"></div>
+        <label for="units">Select you unit:</label>
 
-      <select name="units" id="vtargetunit">
-        <option value="cups">Cups</option>
-        <option value="ml">ML</option>
-      </select>
-      <button type="button" id="vbutton">Convert!</button>
-      <p>Result:<span id="vresulttext"></span></p>
+        <select name="units" id="vtargetunit">
+          <option value="cups">Cups</option>
+          <option value="ml">ML</option>
+        </select>
+        <button type="button" id="vbutton">Convert!</button>
+        <p>Result:<span id="vresulttext"></span></p>
+      </div>
     </div>
   </div>
 </body>
