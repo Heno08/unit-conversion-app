@@ -1,4 +1,4 @@
-import {  convertLength } from './src/length.js';
+import {  convertLength } from './src/length/main.js';
 import {  convertVolume } from './src/volume.js';
 
 const tabs = document.querySelectorAll('[data-tab-target]');
