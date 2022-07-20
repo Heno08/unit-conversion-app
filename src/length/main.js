@@ -1,5 +1,6 @@
 import { metersToCm, metersToFeet, metersToInches, metersToYards, metersToKilometers, metersToMiles } from "./fromMeters.js";
 import { feetToMeters, feetToInches, feetToCm, feetToYards, feetToKilometers, feetToMiles } from "./fromFeet.js";
+import { cmToMeters, cmToInches, cmToFeet, cmToYards, cmToKilometers, cmToMiles } from "./fromCm.js";
 
 function convertLength() {
   const resultText = document.getElementById('resulttext');
@@ -36,6 +37,20 @@ function convertLength() {
         feetToKilometers(number, resultText, targetUnit)
       } else if (targetUnit === 'miles') {
         feetToMiles(number, resultText, targetUnit)
+      }
+    } else if (unit === 'cm') {
+      if (targetUnit === 'meters') {
+        cmToMeters(number, resultText, targetUnit)
+      } else if (targetUnit === 'inches') {
+        cmToInches(number, resultText, targetUnit)
+      } else if (targetUnit === 'feet') {
+        cmToFeet(number, resultText, targetUnit)
+      } else if (targetUnit === 'yards') {
+        cmToYards(number, resultText, targetUnit)
+      } else if (targetUnit === 'kilometers') {
+        cmToKilometers(number, resultText, targetUnit)
+      } else if (targetUnit === 'miles') {
+        cmToMiles(number, resultText, targetUnit)
       }
     }
   } else {
